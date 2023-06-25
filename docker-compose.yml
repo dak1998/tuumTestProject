@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    container_name: tuumtestcontainer
+    image: tuumtestapp:1.0.0
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+          condition: service_completed_successfully
+      rabbitmq:
+          condition: service_completed_successfully
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  db:
+    image: postgres
+    ports:
+      - "5432"
+    environment:
+      - POSTGRES_PASSWORD=Admin@123
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=tuum_test
