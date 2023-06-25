@@ -1,7 +1,6 @@
 package com.tuum.test.mapper;
 
 import com.tuum.test.mapper.provider.TransactionQueryProvider;
-import com.tuum.test.model.Account;
 import com.tuum.test.model.Transaction;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Param;

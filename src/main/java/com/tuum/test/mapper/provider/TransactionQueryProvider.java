@@ -1,6 +1,5 @@
 package com.tuum.test.mapper.provider;
 
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.jdbc.SQL;
 
 public class TransactionQueryProvider {

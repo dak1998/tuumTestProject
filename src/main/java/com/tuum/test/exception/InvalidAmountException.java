@@ -6,7 +6,4 @@ public class InvalidAmountException extends RuntimeException {
         super(message);
     }
 
-    public InvalidAmountException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

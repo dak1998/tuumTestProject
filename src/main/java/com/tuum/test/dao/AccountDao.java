@@ -3,7 +3,6 @@ package com.tuum.test.dao;
 import com.tuum.test.dto.AccountCreationRequestDTO;
 import com.tuum.test.dto.AccountDetailsResponseDTO;
 import com.tuum.test.dto.AccountCurrencyBalanceDTO;
-import com.tuum.test.enums.TransactionDirectionEnum;
 import com.tuum.test.exception.AccountNotFoundException;
 import com.tuum.test.exception.TuumTestException;
 import com.tuum.test.mapper.AccountMapper;
@@ -95,14 +94,12 @@ public class AccountDao {
         }
     }
 
-    public Double updateAccountBalanceForTransactionInDB(Long accountId, String currency, Double updatedBalance) {
+    public void updateAccountBalanceForTransactionInDB(Long accountId, String currency, Double updatedBalance) {
         try(SqlSession sqlSession = sqlSessionFactory.openSession()) {
             CurrencyMapper currencyMapper = sqlSession.getMapper(CurrencyMapper.class);
 
             currencyMapper.updateAccountBalance(accountId, currency, updatedBalance);
         }
-
-        return null;
     }
 
 }

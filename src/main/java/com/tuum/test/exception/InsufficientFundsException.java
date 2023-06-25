@@ -6,7 +6,4 @@ public class InsufficientFundsException extends RuntimeException {
         super(message);
     }
 
-    public InsufficientFundsException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

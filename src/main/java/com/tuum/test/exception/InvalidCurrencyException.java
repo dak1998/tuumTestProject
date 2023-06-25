@@ -6,7 +6,4 @@ public class InvalidCurrencyException extends RuntimeException {
         super(message);
     }
 
-    public InvalidCurrencyException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

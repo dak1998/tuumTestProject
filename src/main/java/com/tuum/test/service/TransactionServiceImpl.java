@@ -75,7 +75,7 @@ public class TransactionServiceImpl implements ITransactionService {
                     .getAvailableAmount() >= transactionCreationRequestDTO.getAmount();
 
             if (!hasSufficientFunds)
-                throw new InsufficientFundsException(String.format(ExceptionMessageConstants.INSUFFICIENT_FUNDS, transactionCreationRequestDTO.getAccountId(), transactionCreationRequestDTO.getAmount().toString()));
+                throw new InsufficientFundsException(String.format(ExceptionMessageConstants.INSUFFICIENT_FUNDS, transactionCreationRequestDTO.getAccountId(), transactionCreationRequestDTO.getAmount()));
         }
     }
 

@@ -6,7 +6,4 @@ public class InvalidDirectionException extends RuntimeException{
         super(message);
     }
 
-    public InvalidDirectionException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

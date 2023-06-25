@@ -6,7 +6,4 @@ public class AccountMissingException extends RuntimeException{
         super(message);
     }
 
-    public AccountMissingException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

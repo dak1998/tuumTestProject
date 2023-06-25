@@ -6,7 +6,4 @@ public class TuumTestException extends RuntimeException {
         super(message);
     }
 
-    public TuumTestException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }

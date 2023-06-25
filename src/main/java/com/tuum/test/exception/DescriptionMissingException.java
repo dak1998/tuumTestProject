@@ -6,7 +6,4 @@ public class DescriptionMissingException extends RuntimeException {
         super(message);
     }
 
-    public DescriptionMissingException(String message, Throwable cause) {
-        super(message, cause);
-    }
 }
