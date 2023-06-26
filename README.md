@@ -1,20 +1,20 @@
 # tuumTestProject
 Test Project for Tuum
 
-Steps to run
+Steps to run<br/>
 
-Clone the project using
-git clone https://github.com/dak1998/tuumTestProject.git
+Clone the project using<br/>
+git clone https://github.com/dak1998/tuumTestProject.git<br/>
 
-Build the project using
-gradle clean build
+Build the project using<br/>
+gradle clean build<br/>
 
-Have docker installed on your system
-Navigate to rot directory of cloned project
-run command
-docker-compose up
+Have docker installed on your system<br/>
+Navigate to rot directory of cloned project<br/>
+run command<br/>
+docker-compose up<br/>
 
-Appplication is a backend application
-Swagger is enabled and preferred way to use the APIs of the application
-Go to this URL on browser to access swagger
-localhost:8080/swagger-ui.html
+Appplication is a backend application<br/>
+Swagger is enabled and preferred way to use the APIs of the application<br/>
+Go to this URL on browser to access swagger<br/>
+localhost:8080/swagger-ui.html<br/>
