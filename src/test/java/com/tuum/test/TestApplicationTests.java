@@ -1,13 +1,9 @@
 package com.tuum.test;
 
 import com.tuum.test.dto.*;
-import com.tuum.test.repository.AccountCurrencyBalanceRepository;
-import com.tuum.test.repository.AccountRepository;
-import com.tuum.test.repository.TransactionRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -33,15 +29,6 @@ class TestApplicationTests {
 
 	private static RestTemplate restTemplate;
 
-	@Autowired
-	private AccountRepository accountRepository;
-
-	@Autowired
-	private TransactionRepository transactionRepository;
-
-	@Autowired
-	private AccountCurrencyBalanceRepository accountCurrencyBalanceRepository;
-
 	@BeforeAll
 	public static void init() {
 		restTemplate = new RestTemplate();
@@ -66,7 +53,7 @@ class TestApplicationTests {
 
 		//Assert for create account
 		//Checking if account is created with any account_id greater than the set starting account ID
-		assertTrue(createAccountResponse.getBody().getAccountId()>500500001);
+		assertTrue(createAccountResponse.getBody().getAccountId()>=500500001);
 
 		//Assert for get account
 		//Checking if account retrieved has customer id same as the one sent in request for account creation
