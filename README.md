@@ -5,6 +5,7 @@ Steps to run<br/>
 
 Clone the project using<br/>
 git clone https://github.com/dak1998/tuumTestProject.git<br/>
+checkout main branch(if not checked out by default)<br/>
 
 Build the project using<br/>
 gradle clean build<br/>
