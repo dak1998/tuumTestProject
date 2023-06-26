@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      db:
+      postgresql:
           condition: service_completed_successfully
       rabbitmq:
           condition: service_completed_successfully
@@ -16,11 +16,11 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-  db:
+  postgresql:
     image: postgres
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_PASSWORD=Admin@123
+      - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_DB=tuum_test
